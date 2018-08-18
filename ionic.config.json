@@ -1,0 +1,7 @@
+{
+  "name": "PizzaClient",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
