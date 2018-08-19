@@ -8,11 +8,15 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h1>Order example</h1>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <pre>{{ order | async | json }}</pre>
+
+  <form (submit)='submit()'>
+    <input [(ngModel)]="id" type="text" name="id">
+
+    <button type="submit">Send order</button>
+  </form>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
