@@ -1,9 +1,13 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { ConnectionProvider, Connection } from "../connection/connection";
-
+export enum PizzaType {
+  napolitana,
+  bolognesa
+}
 export interface Order {
   id: string;
+  pizzaType: PizzaType;
 }
 
 @Injectable()

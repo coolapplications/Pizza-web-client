@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
-import { OrderProvider, Order } from "../../providers/order/order";
+import { OrderProvider, Order, PizzaType } from "../../providers/order/order";
 import { Observable } from "../../../node_modules/rxjs";
 
 @Component({
@@ -10,12 +9,22 @@ import { Observable } from "../../../node_modules/rxjs";
 export class HomePage {
   public order: Observable<Order>;
   public id: string;
+  public pizzaType: PizzaType;
 
   constructor(public orderService: OrderProvider) {
     this.order = this.orderService.getOrders();
   }
 
   submit(event) {
-    this.orderService.sendOrder({ id: this.id });
+    this.orderService.sendOrder({
+      id: this.id,
+      pizzaType: this.pizzaType
+    });
+  }
+  setBolognesa() {
+    this.pizzaType = PizzaType.bolognesa;
+  }
+  setNapolitana() {
+    this.pizzaType = PizzaType.napolitana;
   }
 }

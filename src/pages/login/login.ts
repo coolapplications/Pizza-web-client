@@ -5,6 +5,7 @@ import {
   NavParams,
   MenuController
 } from "ionic-angular";
+import { HomePage } from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -19,7 +20,13 @@ import {
   templateUrl: "login.html"
 })
 export class LoginPage {
-  constructor(private sideMenu: MenuController) {}
+  constructor(
+    public navCtrl: NavController,
+    private sideMenu: MenuController
+  ) {}
+  getHome() {
+    this.navCtrl.setRoot(HomePage);
+  }
 
   ionViewDidEnter() {
     this.sideMenu.swipeEnable(false);
