@@ -10,9 +10,9 @@ import { LoginPage } from "../pages/login/login";
 import { ConnectionProvider } from "../providers/connection/connection";
 import { OrderProvider } from "../providers/order/order";
 import { MyApp } from "./app.component";
-
+import {MenuPage} from "../pages/menu/menu";
 @NgModule({
-  declarations: [MyApp, HomePage, ListPage, LoginPage],
+  declarations: [MyApp, HomePage, ListPage, LoginPage,MenuPage],
   imports: [
     BrowserModule,
     FormsModule,
@@ -21,7 +21,7 @@ import { MyApp } from "./app.component";
     // App modules
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, ListPage, LoginPage],
+  entryComponents: [MyApp, HomePage, ListPage, LoginPage,MenuPage],
   providers: [
     StatusBar,
     SplashScreen,

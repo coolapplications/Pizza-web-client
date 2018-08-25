@@ -6,6 +6,7 @@ import {
   MenuController
 } from "ionic-angular";
 import { HomePage } from "../home/home";
+import { MenuPage } from "../menu/menu";
 
 /**
  * Generated class for the LoginPage page.
@@ -25,7 +26,11 @@ export class LoginPage {
     private sideMenu: MenuController
   ) {}
   getHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(HomePage);
+  }
+
+  getMenu(){
+    this.navCtrl.push(MenuPage);
   }
 
   ionViewDidEnter() {
