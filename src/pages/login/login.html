@@ -16,18 +16,38 @@
   <div>
     <ion-list>
       <ion-item>
-        <button ion-button (click)="getHome()">
-          Cocina
+        <button class="button button-full button-positive" color= "black" ion-button (click)="getHome()">
+          Cocina         
         </button>
+        <ion-img width="1180" height="180"  src="assets/imgs/pizza.jpg"></ion-img> 
+        
       </ion-item>
       <ion-item>
-        <h2>Mesa 1</h2>
+        <button class="button button-block button-positive" ion-button (click)="getMenu()">
+            Mesa 1
+        </button>
+        <ion-img width="1180" height="180"  src="assets/imgs/mesa.jpg"></ion-img> 
       </ion-item>
       <ion-item>
-        <h2>Mesa 2</h2>
+          <button class="button button-block button-positive" ion-button (click)="getMenu()">
+              Mesa 2
+          </button>
+          <ion-img width="1180" height="180"  src="assets/imgs/mesa.jpg"></ion-img> 
       </ion-item>
       <ion-item>
-        <h2>Mesa 3</h2>
+          <button class="button button-block button-positive" ion-button (click)="getMenu()">
+              Mesa 3
+          </button>
+      </ion-item>
+      <ion-item>
+          <button class="button button-block button-positive" ion-button (click)="getMenu()">
+              Mesa 4
+          </button>
+      </ion-item>
+      <ion-item>
+          <button class="button button-block button-positive" ion-button (click)="getMenu()">
+              Mesa 5
+          </button>
       </ion-item>
     </ion-list>
   </div>
